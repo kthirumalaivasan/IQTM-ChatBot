@@ -150,9 +150,9 @@ def find_best_match(query, dataset_name):
 
 # Function to determine the relevant dataset
 def determine_relevant_dataset(query):
-    if re.search(r'\b(garuda|aerospace|drone|agnishwar)\b', query, re.IGNORECASE):
+    if re.search(r'\b(garuda|aerospace|drone|agnishwar|garuda aerospace|rithika mohan|agri|kisan|surveillance|industrial)\b', query, re.IGNORECASE):
         return "GarudaAerospace"
-    elif re.search(r'\b(iq techmax|techmax|services|products|iq)\b', query, re.IGNORECASE):
+    elif re.search(r'\b(iq techmax|techmax|services|products|iq|AR VR|Web 3.0 and AI|AI)\b', query, re.IGNORECASE):
         return "IqTechMax"
     return None
 
@@ -170,7 +170,74 @@ identity_responses = [
 def is_identity_query(query):
     identity_keywords = [
         "who are you", "who developed you", "who built you", "what is your name",
-        "who created you", "tell me about yourself", "what can you do", "who are you?","what is the relation between you and iqtechmax"
+        "who created you", "tell me about yourself", "what can you do", "who are you?","what is the relation between you and iqtechmax", "Who made you?",
+    "Who designed you?",
+    "Who is responsible for your creation?",
+    "Who built this AI assistant?",
+    "Who is your developer?",
+    "Can you tell me who programmed you?",
+    "Who is behind your development?",
+    "Who created you?",
+    "Where do you come from?",
+    "Who is your maker?",
+    "Who are your creators?",
+    "Who taught you all this?",
+    "Who owns you?",
+    "Who do you belong to?",
+    "Who gave you your intelligence?",
+    "Who is your parent organization?",
+    "How were you developed?",
+    "Who are you made by?",
+    "Who built this chatbot?",
+    "Who trained you?",
+    "Which company created you?",
+    "Who gave you life?",
+    "What is your origin story?",
+    "Who conceptualized you?",
+    "Who is the mastermind behind you?",
+    "Who is the genius behind your creation?",
+    "Where were you developed?",
+    "Who manages your updates?",
+    "Who keeps you running?",
+    "Who engineered you?",
+    "Who coded you?",
+    "What company are you associated with?",
+    "Who gave you your capabilities?",
+    "Who oversees your performance?",
+    "Who is your technical support team?",
+    "Who created this chatbot system?",
+    "What company designed you?",
+    "Who programmed this AI assistant?",
+    "Who is the brain behind you?",
+    "Who is the mastermind behind your development?",
+    "Where did you come from?",
+    "Who is responsible for your programming?",
+    "Who is your technical creator?",
+    "Who developed the algorithms that make you work?",
+    "Who crafted your knowledge?",
+    "Who built your system?",
+    "Who owns the rights to you?",
+    "Who is responsible for your design?",
+    "Who manages your database?",
+    "Who is the architect behind you?",
+    "Who assembled your code?",
+    "Who wrote your instructions?",
+    "What team is behind you?",
+    "Who is the creator of this AI assistant?",
+    "Who coded your responses?",
+    "Who is the person behind your development?",
+    "Who works on improving your performance?",
+    "Who is behind your AI technology?",
+    "Who created the framework for you?",
+    "Who supervises your learning process?",
+    "Who updates your knowledge base?",
+    "Who provides you with new information?",
+    "Who is behind your growth and updates?",
+    "Who supports the technology you run on?",
+    "Who designed your interface?",
+    "Who implemented your features?",
+    "Who ensures you stay up-to-date?",
+    "Who provides technical maintenance for you?"
     ]
     for keyword in identity_keywords:
         if re.search(r'\b' + re.escape(keyword) + r'\b', query, re.IGNORECASE):
