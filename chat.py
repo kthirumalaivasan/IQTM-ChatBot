@@ -170,7 +170,7 @@ identity_responses = [
 def is_identity_query(query):
     identity_keywords = [
         "who are you", "who developed you", "who built you", "what is your name",
-        "who created you", "tell me about yourself", "what can you do", "who are you?"
+        "who created you", "tell me about yourself", "what can you do", "who are you?","what is the relation between you and iqtechmax"
     ]
     for keyword in identity_keywords:
         if re.search(r'\b' + re.escape(keyword) + r'\b', query, re.IGNORECASE):
