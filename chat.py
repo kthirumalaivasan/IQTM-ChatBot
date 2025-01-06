@@ -152,7 +152,7 @@ def find_best_match(query, dataset_name):
 def determine_relevant_dataset(query):
     if re.search(r'\b(garuda|aerospace|drone|agnishwar|garuda aerospace|rithika mohan|agri|kisan|surveillance|industrial)\b', query, re.IGNORECASE):
         return "GarudaAerospace"
-    elif re.search(r'\b(iq techmax|techmax|IQTechMax|IQ TechMax|Iq TechMax|IQ Tech Max|Iq Tech Max|services|products|iq|AR VR|Web 3.0 and AI|AI)\b', query, re.IGNORECASE):
+    elif re.search(r'\b(iq techmax|techmax|IQTechMax|customer support |IQ TechMax|Iq TechMax|IQ Tech Max|Iq Tech Max|services|products|iq|AR VR|Web 3.0 and AI|AI)\b', query, re.IGNORECASE):
         return "IqTechMax"
     return None
 
